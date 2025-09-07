@@ -26,10 +26,6 @@
     justify-content: space-between;
     padding-top: 40px;
     padding-bottom: 45px;
-
-    background: url('/images/img01.svg') center/cover no-repeat;
-    width: 100%;
-    /* min-height: 80vh; */
   }
 
   .navbar {
@@ -66,42 +62,14 @@
 </style>
 
 <style>
-  /* .section-second {
+  .section-second {
+    /* height: 1204px; */
     display: flex;
     justify-content: space-between;
     gap: 160px;
     width: calc(100% - 192px);
     margin-inline: auto;
     padding-top: 80px;
-  } */
-
-  .section-second {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* two equal columns */
-    gap: 160px;
-    width: calc(100% - 192px);
-    margin-inline: auto;
-    padding-top: 80px;
-  }
-
-  .section-second .buttons {
-    display: flex;
-    gap: 12px;
-    color: #454545;
-    flex-wrap: wrap;
-  }
-
-
-  @media (max-width: 1250px) {
-    .section-second {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-
-    .section-second .buttons {
-      margin-top: 2rem;
-    }
   }
 </style>
 
@@ -121,25 +89,17 @@
     justify-content: center;
     align-items: center;
     gap: 28px;
-    /* width: 934px; */
-    width: calc(100% - 192px);
-    max-width: 934px;
+    width: 934px;
     margin-inline: auto;
   }
 
   .section-five {
     width: calc(100% - 192px);
     margin-inline: auto;
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px; */
-
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-
 
   .custom_card {
     display: flex;
@@ -181,27 +141,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1.3fr 1fr;
   }
-
-  @media (max-width: 1250px) {
-    .section-six {
-      grid-template-areas:
-        "one"
-        "two"
-        "three"
-        "four";
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      gap: 24px;
-      width: calc(100% - 192px);
-      /* smaller horizontal padding */
-    }
-
-    .section-six>div {
-      min-height: 550px;
-      /* adjust this as needed */
-    }
-  }
-
 
   .section-six>div:nth-child(1) {
     grid-area: one;
@@ -252,77 +191,27 @@
 
 <style>
   .section-seven {
-    display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: 1fr minmax(400px, 1fr);
-    gap: 40px 160px;
+    display: flex;
+    justify-content: space-between;
+    gap: 160px;
     width: calc(100% - 192px);
     margin-inline: auto;
     padding-top: 80px;
     padding-bottom: 80px;
   }
 
-  .section-seven>div:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
+  .section-seven>div:nth-child(1) {
+    flex-basis: 100%;
   }
 
-  .section-seven .map_btn {
+  .section-seven>div:nth-child(2) {
+    flex-basis: 100%;
+  }
+
+  .map_btn {
     padding: 14px 24px;
     background-color: #1C2B28;
-    color: white;
     border-radius: 80px;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-
-  .section-seven>div:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-  }
-
-  .section-seven .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    width: 700px;
-  }
-
-
-  @media (max-width: 1460px) {
-    .section-seven {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-
-    .section-seven .buttons {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-
-    .section-seven>div:first-child {
-      align-items: center;
-      text-align: center;
-    }
-
-    .section-seven>div:first-child>div>div {
-      width: 100%;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .section-seven>div:last-child {
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-    }
   }
 </style>
 
@@ -338,7 +227,7 @@
   }
 
 
-  .faq-list {
+  .faq-list{
     width: 88%;
     margin-inline: auto;
   }
@@ -352,7 +241,7 @@
     gap: 40px;
   }
 
-  .faq-list ul li {
+  .faq-list ul li{
     list-style: none;
     padding: 40px;
     background-color: #E8E8E8;
@@ -412,7 +301,7 @@
 </style>
 
 <style>
-  .section-nine {
+  .section-nine{
     width: calc(100% - 192px);
     margin-inline: auto;
     padding-top: 80px;
@@ -426,44 +315,19 @@
 </style>
 
 <style>
-  .section-ten {
+  .section-ten{
     background-color: #1C2B28;
     color: white;
     padding-top: 232px;
     padding-bottom: 48px;
     padding-left: 96px;
     padding-right: 96px;
-    border-bottom: 144px solid #3D686D;
-
-    display: flex;
-    flex-direction: column;
-    gap: 126px;
-  }
-
-  .section-ten>div:first-child {
-    display: flex;
-    gap: 377px;
-  }
-
-  .big-brand-name{
-    width: 100%; text-align: center; font-size: 25vw; font-weight: bold; white-space: nowrap; line-height: 0.8;
-  }
-
-  @media (max-width: 1300px) {
-    .section-ten>div:first-child {
-      flex-direction: column;
-      align-items: center;
-      gap: 5rem;
-    }
-
-    .big-brand-name{
-      font-size: 22vw;
-    }
+    border-bottom: 144px solid #3D686D;;
   }
 </style>
 
 <body>
-  <section class="hero-section">
+  <section class="hero-section" style="background: url('/images/img01.svg') center/cover no-repeat;">
 
     <div style="display: flex;
     flex-direction: column;
@@ -520,7 +384,7 @@
   </section>
 
   <section class="section-second">
-    <div style="font-size: 72px; font-weight: 500; color: black; line-height: initial;">
+    <div style="flex-basis: 100%; font-size: 72px; font-weight: 500; color: black; line-height: initial;">
       Customs brokerage,
       port handling and
       inland delivery — one
@@ -528,13 +392,13 @@
       visibility.
     </div>
 
-    <div style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div style="flex-basis: 100%; display: flex; flex-direction: column; justify-content: space-between;">
       <div style="font-size: 30px; color: #454545; font-weight: 500; line-height: initial;">
         Clearex is a private freight forwarding and customs brokerage firm that simplifies import clearance and
         last-mile delivery for businesses that import by sea. We manage documentation, customs payments, port handling,
         warehousing, and inland transportation — so your goods move from ship to shelf with speed and compliance.
       </div>
-      <div class="buttons">
+      <div style="display: flex; gap: 12px; color:#454545; flex-wrap: wrap;">
         <button style="background-color: #E8E8E8; 
         border-radius: 80px; 
         font-size: 22px; 
@@ -637,14 +501,14 @@
   </section>
 
   <section class="section-seven">
-    <div>
+    <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: start;">
       <div style="display: flex; flex-direction: column; gap: 64px;">
-        <div style="font-size: 72px; font-weight: 500; line-height: 1;">Where we operate</div>
+        <div style="font-size: 72px; font-weight: 500;">Where we operate</div>
         <div style="font-size: 28px; font-weight: 400; line-height: 1.5; color: #808080;">
           Local offices and partner agents at major seaports across Asia,
           Europe, Africa and the Americans --- scalable for one-off imports or recurring shipments.
         </div>
-        <div class="buttons">
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; width: 700px;">
           <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
             class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">Chattogram</button>
           <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
@@ -673,7 +537,7 @@
     <div style="display: flex; flex-direction: column; align-items: start; gap: 32px;">
       <label for=""
         style="padding: 16px 36px; background-color: black; color: white; font-size: 22px; font-weight: 500; border-radius: 80px;">FAQ</label>
-      <div style="font-size: 72px; font-weight: 500; line-height: 1;">
+      <div style="font-size: 72px; font-weight: 500;">
         Frequently Asked Questions
       </div>
     </div>
@@ -690,7 +554,7 @@
             </span>
           </button>
           <div class="panel">
-            <p>Typically 48-72 hours after vessel arrival, subject to inspections.</p>
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
           </div>
         </li>
         <li>
@@ -702,7 +566,7 @@
             </span>
           </button>
           <div class="panel">
-            <p>Typically 48-72 hours after vessel arrival, subject to inspections.</p>
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
           </div>
         </li>
         <li>
@@ -714,7 +578,7 @@
             </span>
           </button>
           <div class="panel">
-            <p>Typically 48-72 hours after vessel arrival, subject to inspections.</p>
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
           </div>
         </li>
         <li>
@@ -726,7 +590,7 @@
             </span>
           </button>
           <div class="panel">
-            <p>Typically 48-72 hours after vessel arrival, subject to inspections.</p>
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
           </div>
         </li>
       </ul>
@@ -755,7 +619,7 @@
   </section>
 
   <section class="section-ten">
-    <div>
+    <div style="display: flex; gap: 377px;">
       <div style="font-size: 52px; font-weight: 400; line-height: 1.4; width: 803px;">
         Don't let customs slow you down.
         Get a guaranteed clearance plan.
@@ -773,12 +637,12 @@
         </ul>
       </div>
     </div>
-    <div class="big-brand-name">
+    <div style="width: 100%; text-align: center; font-size: 24vw; font-weight: bold; white-space: nowrap;">
       Clearex
     </div>
     <!-- <div style="height: 144px; background-color: #3D686D;"></div> -->
   </section>
-
+  
   <script type="module" src="/src/assets/js/main.js"></script>
   <script>
     const accordions = document.querySelectorAll(".accordion");
