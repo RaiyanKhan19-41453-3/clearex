@@ -1,0 +1,56 @@
+/* Remove default margin, padding, border */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+  color: inherit; /* inherit color from parent */
+}
+
+/* Remove default table spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default form styling */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Make images responsive */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Set default body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #333;
+}

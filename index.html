@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/images/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="stylesheet" href="/src/assets/css/main.css">
+</head>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+</style>
+
+<style>
+  .hero-section {
+    /* height: 757px; */
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
+  .navbar {
+    display: flex;
+    gap: 64px;
+    width: calc(100% - 192px);
+    margin-inline: auto;
+  }
+
+  .logo {
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+  }
+
+  .nav-link-list {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 24px;
+    font-weight: 500;
+    color: #454545;
+  }
+
+  .home-intro {
+    max-width: 755px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+</style>
+
+<style>
+  .section-second {
+    /* height: 1204px; */
+    display: flex;
+    justify-content: space-between;
+    gap: 160px;
+    width: calc(100% - 192px);
+    margin-inline: auto;
+    padding-top: 80px;
+  }
+</style>
+
+<style>
+  .section-third {
+    /* padding-top: 24px; */
+    width: calc(100% - 192px);
+    height: 640px;
+    margin-inline: auto;
+  }
+</style>
+
+<style>
+  .section-four {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    width: 934px;
+    margin-inline: auto;
+  }
+
+  .section-five {
+    width: calc(100% - 192px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .custom_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .custom_card>div:nth-child(2) {
+    font-size: 38px;
+    font-weight: 500;
+    width: 335px;
+    color: #041522;
+    text-align: center;
+  }
+
+  .custom_card>div:nth-child(3) {
+    font-size: 24px;
+    font-weight: 400;
+    color: #041522;
+    opacity: 70%;
+    text-align: center;
+  }
+</style>
+
+<style>
+  .section-six {
+    width: calc(100% - 192px);
+    margin-inline: auto;
+    color: white;
+
+    display: grid;
+    gap: 40px;
+    grid-template-areas:
+      'one two four'
+      'one three four';
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 1fr;
+  }
+
+  .section-six>div:nth-child(1) {
+    grid-area: one;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 24px;
+  }
+
+  .section-six>div:nth-child(2) {
+    grid-area: two;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .section-six>div:nth-child(2)>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .section-six>div:nth-child(3) {
+    grid-area: three;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .section-six>div:nth-child(3)>div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-six>div:nth-child(4) {
+    grid-area: four;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 32px;
+  }
+
+  .section-six>div:nth-child(4)>div:nth-child(2) {
+    line-height: initial;
+  }
+</style>
+
+<style>
+  .section-seven {
+    display: flex;
+    justify-content: space-between;
+    gap: 160px;
+    width: calc(100% - 192px);
+    margin-inline: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section-seven>div:nth-child(1) {
+    flex-basis: 100%;
+  }
+
+  .section-seven>div:nth-child(2) {
+    flex-basis: 100%;
+  }
+
+  .map_btn {
+    padding: 14px 24px;
+    background-color: #1C2B28;
+    border-radius: 80px;
+  }
+</style>
+
+<style>
+  .section-eight {
+    width: calc(100% - 192px);
+    margin-inline: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 101px;
+  }
+
+
+  .faq-list{
+    width: 88%;
+    margin-inline: auto;
+  }
+
+  .faq-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .faq-list ul li{
+    list-style: none;
+    padding: 40px;
+    background-color: #E8E8E8;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .accordion {
+    width: 100%;
+    /* padding: 20px; */
+    text-align: left;
+    font-size: 30px;
+    font-weight: 500;
+    border: none;
+    /* border-bottom: 1px solid #ddd; */
+    background: none;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion .icon img {
+    /* width: 20px; */
+    /* height: 20px; */
+    display: none;
+  }
+
+  .accordion .icon .icon-plus {
+    display: block;
+    /* show plus by default */
+  }
+
+  .accordion.active .icon .icon-plus {
+    display: none;
+  }
+
+  .accordion.active .icon .icon-cross {
+    display: block;
+  }
+
+  .panel {
+    display: none;
+    /* padding: 0 20px 20px; */
+    font-size: 24px;
+    font-weight: 400;
+    color: #454545;
+  }
+</style>
+
+<style>
+  .section-nine{
+    width: calc(100% - 192px);
+    margin-inline: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+</style>
+
+<style>
+  .section-ten{
+    background-color: #1C2B28;
+    color: white;
+    padding-top: 232px;
+    padding-bottom: 48px;
+    padding-left: 96px;
+    padding-right: 96px;
+    border-bottom: 144px solid #3D686D;;
+  }
+</style>
+
+<body>
+  <section class="hero-section" style="background: url('/images/img01.svg') center/cover no-repeat;">
+
+    <div style="display: flex;
+    flex-direction: column;
+    gap: 152px;">
+      <nav class="navbar">
+        <div class="logo">
+          Clearex
+        </div>
+        <ul class="nav-link-list">
+          <li><a href="#" class="nav-link">Explore</a></li>
+          <li><a href="#" class="nav-link">Features</a></li>
+          <li><a href="#" class="nav-link">Resources</a></li>
+          <li><a href="#" class="nav-link">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <div style="width: calc(100% - 192px); margin-inline: auto;">
+        <div class="home-intro">
+          <div style="font-size: 102px; color: #1C2B28; font-weight: 500; line-height: initial;">Cargo In Motion. Fast
+            In Delivery</div>
+
+          <div style="display: flex; flex-direction: column; gap: 33px; align-items: start;">
+            <div style="font-size: 28px; font-weight: 400; color: #454545;">
+              From container dicharge to doorstep delivery,
+              we handle customs documentation,
+              duty paiyments and transport so your team can focus on selling.
+            </div>
+
+            <div>
+              <button
+                style="color: white; background-color: #1C2B28; padding: 24.17px 48.35px; border-radius: 15px; display: flex; align-items: center; gap: 5px; font-size: 24px; font-weight: 600;">
+                <span>Contact An Agent</span>
+                <img src="/src/assets/icons/angle-arrow.svg" alt="" srcset="">
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div
+      style="width: calc(100% - 192px); margin-inline: auto; display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-size: 18px; font-weight: 500; color: #1C2B28; opacity: 50%;">
+        Sea imports --- cleared and delivered, without the chaos.
+      </div>
+      <div>
+        <img src="/src/assets/icons/messenger.svg" alt="" srcset="">
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section-second">
+    <div style="flex-basis: 100%; font-size: 72px; font-weight: 500; color: black; line-height: initial;">
+      Customs brokerage,
+      port handling and
+      inland delivery — one
+      partner, one price, full
+      visibility.
+    </div>
+
+    <div style="flex-basis: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+      <div style="font-size: 30px; color: #454545; font-weight: 500; line-height: initial;">
+        Clearex is a private freight forwarding and customs brokerage firm that simplifies import clearance and
+        last-mile delivery for businesses that import by sea. We manage documentation, customs payments, port handling,
+        warehousing, and inland transportation — so your goods move from ship to shelf with speed and compliance.
+      </div>
+      <div style="display: flex; gap: 12px; color:#454545; flex-wrap: wrap;">
+        <button style="background-color: #E8E8E8; 
+        border-radius: 80px; 
+        font-size: 22px; 
+        font-weight: 500; 
+        padding: 14px 24px;">
+          Clear cargo
+        </button>
+        <button style="background-color: #E8E8E8; 
+        border-radius: 80px; 
+        font-size: 22px; 
+        font-weight: 500; 
+        padding: 14px 24px;">
+          Fast delivery
+        </button>
+        <button style="background-color: #E8E8E8; 
+        border-radius: 80px; 
+        font-size: 22px; 
+        font-weight: 500; 
+        padding: 14px 24px;">
+          Global reach.
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-third" style="background: url('/images/img02.svg') center/cover no-repeat;">
+
+  </section>
+
+  <section class="section-four">
+    <div style="font-size: 72px; font-weight: 500; color: black; line-height: initial;">
+      What We Do
+    </div>
+    <div style="font-size: 28px; font-weight: 400; color: #041522; opacity: 70%; text-align: center;">
+      Full clearing and forwarding services designed for importers who need speed, compliance, and clear costing
+    </div>
+  </section>
+
+  <section class="section-five">
+    <div class="custom_card">
+      <div><img src="/src/assets/icons/custom_brokerage.svg" alt="" srcset=""></div>
+      <div>Customs Brokerage</div>
+      <div>Licensed brokers prepare and submit all import documentation, calculate duties and taxes and coordinate with
+        customs</div>
+    </div>
+
+    <div class="custom_card">
+      <div><img src="/src/assets/icons/port_handling.svg" alt="" srcset=""></div>
+      <div>Port Handling & Storage</div>
+      <div>We coordinate crane work, container deconsolidation and secure short-term storage to minimize demurrage.
+      </div>
+    </div>
+
+    <div class="custom_card">
+      <div><img src="/src/assets/icons/transportation_delivery.svg" alt="" srcset=""></div>
+      <div>
+        Transportation & Delivery
+      </div>
+      <div>Local trucking and last-mile partners deliver containers, pallets or LTL shipments directly to your warehouse
+        or customer</div>
+    </div>
+  </section>
+
+  <section class="section-six">
+
+    <div style="background: url('/images/trust_in_business.svg') center/cover no-repeat; padding: 48px 32px;">
+      <div style="font-size: 38px; font-weight: 500;">Trust in businesses</div>
+      <div style="font-size: 24px; font-weight: 400;">Licensed customs brokers in every major port we serve</div>
+      <button
+        style="font-size: 25px; font-weight: 600; padding: 25px 48px; border-radius: 80px; background-color: white; color: black;">See
+        Case Studies <img src="" alt="" srcset=""></button>
+    </div>
+
+    <div style="background-color: #1C2B28; padding: 24px 32px;">
+      <div style="font-size: 128px; font-weight: 500;">100M+</div>
+      <div>
+        <div style="font-size: 30px; font-weight: 500;">Happy Customers</div>
+        <div style="font-size: 24px; font-weight: 400;">Yes, we offer duty-on-behalf for trusted and happy clients.
+        </div>
+      </div>
+    </div>
+
+    <div style="background: url('/images/customer_clearance.svg') center/cover no-repeat; padding: 24px 32px;">
+      <div style="font-size: 24px; font-weight: 400;">On-time customs clearance (sample KPI)</div>
+      <div>
+        <div style="font-size: 128px; font-weight: 500;">95%</div>
+        <img src="/src/assets/icons/right_angle.svg" alt="" srcset="">
+      </div>
+    </div>
+
+    <div style="background: url('/images/transparent_fees.svg') center/cover no-repeat; padding: 24px 32px;">
+      <img src="/src/assets/icons/shield.svg" alt="" srcset="">
+      <div style="font-size: 38px; font-weight: 500;">
+        Transparent fees — no surprise demurrage without consent.
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <section class="section-seven">
+    <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 64px;">
+        <div style="font-size: 72px; font-weight: 500;">Where we operate</div>
+        <div style="font-size: 28px; font-weight: 400; line-height: 1.5; color: #808080;">
+          Local offices and partner agents at major seaports across Asia,
+          Europe, Africa and the Americans --- scalable for one-off imports or recurring shipments.
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; width: 700px;">
+          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+            class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">Chattogram</button>
+          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+            class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">Rotterdam</button>
+          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+            class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">Singapore</button>
+          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+            class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">New York</button>
+        </div>
+      </div>
+
+      <div>
+        <button
+          style="padding: 25px 48px; font-size: 25px; font-weight: 600; border-radius: 15px; border: 2px solid black;">
+          Check port coverage
+        </button>
+      </div>
+    </div>
+
+    <div style="height: 920px; background: url('/images/map-image.svg') center/cover no-repeat;">
+
+    </div>
+  </section>
+
+  <section class="section-eight">
+    <div style="display: flex; flex-direction: column; align-items: start; gap: 32px;">
+      <label for=""
+        style="padding: 16px 36px; background-color: black; color: white; font-size: 22px; font-weight: 500; border-radius: 80px;">FAQ</label>
+      <div style="font-size: 72px; font-weight: 500;">
+        Frequently Asked Questions
+      </div>
+    </div>
+
+
+    <div class="faq-list">
+      <ul>
+        <li>
+          <button class="accordion">
+            How long does clearance take?
+            <span class="icon">
+              <img src="/src/assets/icons/plus.svg" class="icon-plus" />
+              <img src="/src/assets/icons/cross.svg" class="icon-cross" />
+            </span>
+          </button>
+          <div class="panel">
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
+          </div>
+        </li>
+        <li>
+          <button class="accordion">
+            Do you pay duties on my behalf?
+            <span class="icon">
+              <img src="/src/assets/icons/plus.svg" class="icon-plus" />
+              <img src="/src/assets/icons/cross.svg" class="icon-cross" />
+            </span>
+          </button>
+          <div class="panel">
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
+          </div>
+        </li>
+        <li>
+          <button class="accordion">
+            How does the money back gaurantee work?
+            <span class="icon">
+              <img src="/src/assets/icons/plus.svg" class="icon-plus" />
+              <img src="/src/assets/icons/cross.svg" class="icon-cross" />
+            </span>
+          </button>
+          <div class="panel">
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
+          </div>
+        </li>
+        <li>
+          <button class="accordion">
+            Can you handle insurance?
+            <span class="icon">
+              <img src="/src/assets/icons/plus.svg" class="icon-plus" />
+              <img src="/src/assets/icons/cross.svg" class="icon-cross" />
+            </span>
+          </button>
+          <div class="panel">
+            <p>Typically 48-72 hours after vessel arrival, subject to  inspections.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+  </section>
+
+  <section class="section-nine">
+    <div style="font-size: 22px; font-weight: 500; text-align: center; color: #454545; opacity: 60%;">
+      We've been mentioned in the press
+    </div>
+    <div class="press-logos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem;">
+      <img src="/src/assets/icons/washington.svg" alt="" srcset="">
+      <img src="/src/assets/icons/engadget.svg" alt="" srcset="">
+      <img src="/src/assets/icons/bloomberg.svg" alt="">
+      <img src="/src/assets/icons/gizmodo.svg" alt="">
+      <img src="/src/assets/icons/forbes.svg" alt="" srcset="">
+      <!-- <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div> -->
+    </div>
+  </section>
+
+  <section class="section-ten">
+    <div style="display: flex; gap: 377px;">
+      <div style="font-size: 52px; font-weight: 400; line-height: 1.4; width: 803px;">
+        Don't let customs slow you down.
+        Get a guaranteed clearance plan.
+      </div>
+      <div style="font-size: 24px; font-weight: 400; display: flex; gap: 180px;">
+        <ul>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="width: 100%; text-align: center; font-size: 24vw; font-weight: bold; white-space: nowrap;">
+      Clearex
+    </div>
+    <!-- <div style="height: 144px; background-color: #3D686D;"></div> -->
+  </section>
+  
+  <script type="module" src="/src/assets/js/main.js"></script>
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach((accordion) => {
+      accordion.addEventListener("click", function () {
+
+        accordions.forEach(acc => {
+          if (acc !== this) {
+            acc.classList.remove("active");
+            acc.nextElementSibling.style.display = "none";
+          }
+        });
+
+
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
