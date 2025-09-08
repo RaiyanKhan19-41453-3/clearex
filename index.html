@@ -32,6 +32,29 @@
     /* min-height: 80vh; */
   }
 
+  .hero-section>div:nth-child(1)>div:nth-child(1) {
+    width: calc(100% - 192px);
+    margin-inline: auto;
+  }
+
+  .hero-section>div:nth-child(2) {
+    width: calc(100% - 192px);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    .hero-section>div:nth-child(1)>div:nth-child(1) {
+      width: calc(100% - 50px);
+    }
+
+    .hero-section>div:nth-child(2) {
+      width: calc(100% - 50px);
+    }
+  }
+
   .navbar {
     display: flex;
     gap: 64px;
@@ -103,6 +126,12 @@
       margin-top: 2rem;
     }
   }
+
+  @media (max-width: 800px) {
+    .section-second {
+      width: calc(100% - 50px);
+    }
+  }
 </style>
 
 <style>
@@ -111,6 +140,12 @@
     width: calc(100% - 192px);
     height: 640px;
     margin-inline: auto;
+  }
+
+  @media (max-width: 800px) {
+    .section-third {
+      width: calc(100% - 50px);
+    }
   }
 </style>
 
@@ -127,6 +162,13 @@
     margin-inline: auto;
   }
 
+  @media (max-width: 800px) {
+    .section-four {
+      width: calc(100% - 50px);
+      text-align: center;
+    }
+  }
+
   .section-five {
     width: calc(100% - 192px);
     margin-inline: auto;
@@ -140,6 +182,12 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
+  @media (max-width: 800px) {
+    .section-five {
+      text-align: center;
+      width: calc(100% - 50px);
+    }
+  }
 
   .custom_card {
     display: flex;
@@ -150,15 +198,15 @@
   }
 
   .custom_card>div:nth-child(2) {
-    font-size: 38px;
+    font-size: clamp(20px, 5vw, 38px);
     font-weight: 500;
-    width: 335px;
+    max-width: 335px;
     color: #041522;
     text-align: center;
   }
 
   .custom_card>div:nth-child(3) {
-    font-size: 24px;
+    font-size: clamp(16px, 4vw, 24px);
     font-weight: 400;
     color: #041522;
     opacity: 70%;
@@ -193,14 +241,23 @@
       grid-template-rows: auto;
       gap: 24px;
       width: calc(100% - 192px);
-      /* smaller horizontal padding */
     }
 
     .section-six>div {
       min-height: 550px;
-      /* adjust this as needed */
     }
   }
+
+  @media (max-width: 800px) {
+    .section-six {
+      width: calc(100% - 50px);
+    }
+  }
+
+
+
+
+
 
 
   .section-six>div:nth-child(1) {
@@ -209,6 +266,15 @@
     flex-direction: column;
     justify-content: end;
     gap: 24px;
+  }
+
+  .section-six>div:nth-child(1)>button {
+    font-size: clamp(16px, 2vw, 25px);
+    font-weight: 600;
+    padding: clamp(1px, 2vw, 25px) clamp(20px, 4vw, 48px);
+    border-radius: 80px;
+    background-color: white;
+    color: black;
   }
 
   .section-six>div:nth-child(2) {
@@ -234,6 +300,8 @@
   .section-six>div:nth-child(3)>div:nth-child(2) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .section-six>div:nth-child(4) {
@@ -262,6 +330,12 @@
     padding-bottom: 80px;
   }
 
+  @media (max-width: 800px) {
+    .section-seven {
+      width: calc(100% - 50px);
+    }
+  }
+
   .section-seven>div:first-child {
     display: flex;
     flex-direction: column;
@@ -270,11 +344,12 @@
   }
 
   .section-seven .map_btn {
-    padding: 14px 24px;
+    padding: clamp(10px, 1.5vw, 14px) clamp(18px, 3vw, 24px);
+
     background-color: #1C2B28;
     color: white;
     border-radius: 80px;
-    font-size: 22px;
+    font-size: clamp(18px, 2vw, 22px);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -337,6 +412,11 @@
     gap: 101px;
   }
 
+  @media (max-width: 800px) {
+    .section-eight {
+      width: calc(100% - 50px);
+    }
+  }
 
   .faq-list {
     width: 88%;
@@ -354,7 +434,8 @@
 
   .faq-list ul li {
     list-style: none;
-    padding: 40px;
+    padding: clamp(20px, 4vw, 40px);
+
     background-color: #E8E8E8;
 
     display: flex;
@@ -366,7 +447,7 @@
     width: 100%;
     /* padding: 20px; */
     text-align: left;
-    font-size: 30px;
+    font-size: clamp(18px, 3vw, 30px);
     font-weight: 500;
     border: none;
     /* border-bottom: 1px solid #ddd; */
@@ -405,7 +486,7 @@
   .panel {
     display: none;
     /* padding: 0 20px 20px; */
-    font-size: 24px;
+    font-size: clamp(16px, 2.5vw, 24px);
     font-weight: 400;
     color: #454545;
   }
@@ -422,6 +503,12 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
+  }
+
+  @media (max-width: 800px) {
+    .section-nine {
+      width: calc(100% - 50px);
+    }
   }
 </style>
 
@@ -440,13 +527,35 @@
     gap: 126px;
   }
 
+  @media (max-width: 800px) {
+    .section-ten {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
   .section-ten>div:first-child {
     display: flex;
     gap: 377px;
   }
 
-  .big-brand-name{
-    width: 100%; text-align: center; font-size: 25vw; font-weight: bold; white-space: nowrap; line-height: 0.8;
+  .section-ten>div:first-child>div:first-child {
+    font-size: clamp(32px, 5vw, 52px);
+
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 803px;
+  }
+
+  .big-brand-name {
+    width: 100%;
+    text-align: center;
+    /* font-size: 25vw; */
+    font-size: clamp(24px, 25vw, 500px);
+
+    font-weight: bold;
+    white-space: nowrap;
+    line-height: 0.8;
   }
 
   @media (max-width: 1300px) {
@@ -456,8 +565,14 @@
       gap: 5rem;
     }
 
-    .big-brand-name{
-      font-size: 22vw;
+    .section-ten>div:first-child>div:first-child {
+      text-align: center;
+    }
+
+    .big-brand-name {
+      /* font-size: 22vw; */
+      font-size: clamp(20px, 22vw, 450px);
+
     }
   }
 </style>
@@ -468,7 +583,7 @@
     <div style="display: flex;
     flex-direction: column;
     gap: 152px;">
-      <nav class="navbar">
+      <!-- <nav class="navbar">
         <div class="logo">
           Clearex
         </div>
@@ -478,15 +593,16 @@
           <li><a href="#" class="nav-link">Resources</a></li>
           <li><a href="#" class="nav-link">Privacy Policy</a></li>
         </ul>
-      </nav>
+      </nav> -->
 
-      <div style="width: calc(100% - 192px); margin-inline: auto;">
+      <div>
         <div class="home-intro">
-          <div style="font-size: 102px; color: #1C2B28; font-weight: 500; line-height: initial;">Cargo In Motion. Fast
+          <div style="font-size: clamp(32px, 5vw, 102px);; color: #1C2B28; font-weight: 500; line-height: initial;">
+            Cargo In Motion. Fast
             In Delivery</div>
 
           <div style="display: flex; flex-direction: column; gap: 33px; align-items: start;">
-            <div style="font-size: 28px; font-weight: 400; color: #454545;">
+            <div style="font-size: clamp(16px, 2vw, 28px); font-weight: 400; color: #454545;">
               From container dicharge to doorstep delivery,
               we handle customs documentation,
               duty paiyments and transport so your team can focus on selling.
@@ -494,7 +610,7 @@
 
             <div>
               <button
-                style="color: white; background-color: #1C2B28; padding: 24.17px 48.35px; border-radius: 15px; display: flex; align-items: center; gap: 5px; font-size: 24px; font-weight: 600;">
+                style="color: white; background-color: #1C2B28; padding: clamp(14px, 2vw, 24.17px) clamp(28px, 4vw, 48.35px); border-radius: 15px; display: flex; align-items: center; gap: 5px; font-size: clamp(16px, 2vw, 24px); font-weight: 600;">
                 <span>Contact An Agent</span>
                 <img src="/src/assets/icons/angle-arrow.svg" alt="" srcset="">
               </button>
@@ -507,9 +623,8 @@
     </div>
 
 
-    <div
-      style="width: calc(100% - 192px); margin-inline: auto; display: flex; justify-content: space-between; align-items: center;">
-      <div style="font-size: 18px; font-weight: 500; color: #1C2B28; opacity: 50%;">
+    <div>
+      <div style="font-size: clamp(14px, 1.5vw, 18px); font-weight: 500; color: #1C2B28; opacity: 50%;">
         Sea imports --- cleared and delivered, without the chaos.
       </div>
       <div>
@@ -520,7 +635,7 @@
   </section>
 
   <section class="section-second">
-    <div style="font-size: 72px; font-weight: 500; color: black; line-height: initial;">
+    <div style="font-size: clamp(24px, 3vw, 72px); font-weight: 500; color: black; line-height: initial;">
       Customs brokerage,
       port handling and
       inland delivery — one
@@ -529,7 +644,7 @@
     </div>
 
     <div style="display: flex; flex-direction: column; justify-content: space-between;">
-      <div style="font-size: 30px; color: #454545; font-weight: 500; line-height: initial;">
+      <div style="font-size: clamp(18px, 3vw, 30px); color: #454545; font-weight: 500; line-height: initial;">
         Clearex is a private freight forwarding and customs brokerage firm that simplifies import clearance and
         last-mile delivery for businesses that import by sea. We manage documentation, customs payments, port handling,
         warehousing, and inland transportation — so your goods move from ship to shelf with speed and compliance.
@@ -537,23 +652,23 @@
       <div class="buttons">
         <button style="background-color: #E8E8E8; 
         border-radius: 80px; 
-        font-size: 22px; 
+        font-size: clamp(16px, 2vw, 22px); 
         font-weight: 500; 
-        padding: 14px 24px;">
+        padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 24px)">
           Clear cargo
         </button>
         <button style="background-color: #E8E8E8; 
         border-radius: 80px; 
-        font-size: 22px; 
+        font-size: clamp(16px, 2vw, 22px); 
         font-weight: 500; 
-        padding: 14px 24px;">
+        padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 24px)">
           Fast delivery
         </button>
         <button style="background-color: #E8E8E8; 
         border-radius: 80px; 
-        font-size: 22px; 
+        font-size: clamp(16px, 2vw, 22px); 
         font-weight: 500; 
-        padding: 14px 24px;">
+        padding: clamp(10px, 2vw, 14px) clamp(16px, 3vw, 24px)">
           Global reach.
         </button>
       </div>
@@ -565,10 +680,10 @@
   </section>
 
   <section class="section-four">
-    <div style="font-size: 72px; font-weight: 500; color: black; line-height: initial;">
+    <div style="font-size: clamp(28px, 5vw, 72px); font-weight: 500; color: black; line-height: initial;">
       What We Do
     </div>
-    <div style="font-size: 28px; font-weight: 400; color: #041522; opacity: 70%; text-align: center;">
+    <div style="font-size: clamp(16px, 3vw, 28px); font-weight: 400; color: #041522; opacity: 70%; text-align: center;">
       Full clearing and forwarding services designed for importers who need speed, compliance, and clear costing
     </div>
   </section>
@@ -601,33 +716,35 @@
   <section class="section-six">
 
     <div style="background: url('/images/trust_in_business.svg') center/cover no-repeat; padding: 48px 32px;">
-      <div style="font-size: 38px; font-weight: 500;">Trust in businesses</div>
-      <div style="font-size: 24px; font-weight: 400;">Licensed customs brokers in every major port we serve</div>
-      <button
-        style="font-size: 25px; font-weight: 600; padding: 25px 48px; border-radius: 80px; background-color: white; color: black;">See
+      <div style="font-size: clamp(20px, 5vw, 38px); font-weight: 500;">Trust in businesses</div>
+      <div style="font-size: clamp(16px, 4vw, 24px); font-weight: 400;">Licensed customs brokers in every major port we serve</div>
+      <button>See
         Case Studies <img src="" alt="" srcset=""></button>
     </div>
 
     <div style="background-color: #1C2B28; padding: 24px 32px;">
-      <div style="font-size: 128px; font-weight: 500;">100M+</div>
+      <div style="font-size: clamp(48px, 10vw, 128px); font-weight: 500;">100M+</div>
       <div>
-        <div style="font-size: 30px; font-weight: 500;">Happy Customers</div>
-        <div style="font-size: 24px; font-weight: 400;">Yes, we offer duty-on-behalf for trusted and happy clients.
+        <div style="font-size: clamp(18px, 3vw, 30px); font-weight: 500;">Happy Customers</div>
+        <div style="font-size: clamp(16px, 4vw, 24px); font-weight: 400;">Yes, we offer duty-on-behalf for trusted and happy clients.
         </div>
       </div>
     </div>
 
     <div style="background: url('/images/customer_clearance.svg') center/cover no-repeat; padding: 24px 32px;">
-      <div style="font-size: 24px; font-weight: 400;">On-time customs clearance (sample KPI)</div>
+      <div style="font-size: clamp(16px, 4vw, 24px); font-weight: 400;">On-time customs clearance (sample KPI)</div>
       <div>
-        <div style="font-size: 128px; font-weight: 500;">95%</div>
-        <img src="/src/assets/icons/right_angle.svg" alt="" srcset="">
+        <div style="font-size: clamp(48px, 10vw, 128px); font-weight: 500;">95%</div>
+        <div>
+          <img src="/src/assets/icons/right_angle.svg" alt="" srcset="">
+        </div>
+
       </div>
     </div>
 
     <div style="background: url('/images/transparent_fees.svg') center/cover no-repeat; padding: 24px 32px;">
       <img src="/src/assets/icons/shield.svg" alt="" srcset="">
-      <div style="font-size: 38px; font-weight: 500;">
+      <div style="font-size: clamp(20px, 5vw, 38px); font-weight: 500;">
         Transparent fees — no surprise demurrage without consent.
       </div>
     </div>
@@ -639,26 +756,26 @@
   <section class="section-seven">
     <div>
       <div style="display: flex; flex-direction: column; gap: 64px;">
-        <div style="font-size: 72px; font-weight: 500; line-height: 1;">Where we operate</div>
-        <div style="font-size: 28px; font-weight: 400; line-height: 1.5; color: #808080;">
+        <div style="font-size: clamp(24px, 3vw, 72px); font-weight: 500; line-height: 1;">Where we operate</div>
+        <div style="font-size: clamp(16px, 3vw, 28px); font-weight: 400; line-height: 1.5; color: #808080;">
           Local offices and partner agents at major seaports across Asia,
           Europe, Africa and the Americans --- scalable for one-off imports or recurring shipments.
         </div>
         <div class="buttons">
-          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+          <button style="color: white; font-size: clamp(16px, 2vw, 22px); display: flex; align-items: center; gap: 6px;"
             class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">Chattogram</button>
-          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+          <button style="color: white; font-size: clamp(16px, 2vw, 22px); display: flex; align-items: center; gap: 6px;"
             class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">Rotterdam</button>
-          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+          <button style="color: white; font-size: clamp(16px, 2vw, 22px); display: flex; align-items: center; gap: 6px;"
             class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">Singapore</button>
-          <button style="color: white; font-size: 22px; display: flex; align-items: center; gap: 6px;"
+          <button style="color: white; font-size: clamp(16px, 2vw, 22px); display: flex; align-items: center; gap: 6px;"
             class="map_btn"><img src="/src/assets/icons/MapPinSimpleLine.svg" alt="" srcset="">New York</button>
         </div>
       </div>
 
       <div>
         <button
-          style="padding: 25px 48px; font-size: 25px; font-weight: 600; border-radius: 15px; border: 2px solid black;">
+          style="padding: clamp(12px, 2vw, 25px) clamp(20px, 4vw, 48px); font-size: clamp(16px, 4vw, 25px); font-weight: 600; border-radius: 15px; border: 2px solid black;">
           Check port coverage
         </button>
       </div>
@@ -672,8 +789,8 @@
   <section class="section-eight">
     <div style="display: flex; flex-direction: column; align-items: start; gap: 32px;">
       <label for=""
-        style="padding: 16px 36px; background-color: black; color: white; font-size: 22px; font-weight: 500; border-radius: 80px;">FAQ</label>
-      <div style="font-size: 72px; font-weight: 500; line-height: 1;">
+        style="padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 36px); background-color: black; color: white; font-size: clamp(18px, 2vw, 22px); font-weight: 500; border-radius: 80px;">FAQ</label>
+      <div style="font-size: clamp(24px, 3vw, 72px); font-weight: 500; line-height: 1;">
         Frequently Asked Questions
       </div>
     </div>
@@ -737,7 +854,7 @@
   </section>
 
   <section class="section-nine">
-    <div style="font-size: 22px; font-weight: 500; text-align: center; color: #454545; opacity: 60%;">
+    <div style="font-size: clamp(16px, 2vw, 22px); font-weight: 500; text-align: center; color: #454545; opacity: 60%;">
       We've been mentioned in the press
     </div>
     <div class="press-logos" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem;">
@@ -756,11 +873,11 @@
 
   <section class="section-ten">
     <div>
-      <div style="font-size: 52px; font-weight: 400; line-height: 1.4; width: 803px;">
+      <div>
         Don't let customs slow you down.
         Get a guaranteed clearance plan.
       </div>
-      <div style="font-size: 24px; font-weight: 400; display: flex; gap: 180px;">
+      <div style="font-size: clamp(16px, 4vw, 24px); font-weight: 400; display: flex; gap: 180px;">
         <ul>
           <li><a href="#">Services</a></li>
           <li><a href="#">Work</a></li>
